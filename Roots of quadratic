@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+float a,b,c,D,root1,root2,realpart,imgpart;
+printf("enter coefficents of a,b,c");
+scanf("%f%f%f",&a,&b,&c);
+D=b*b-4*a*c;
+if (D>0)
+{
+    root1=(-b+sqrt(D))/(2*a);
+    root2=(-b-sqrt(D))/(2*a);
+    printf("roots are real and diffrent:\n");
+    printf("root1=%.2f,root2=%.2f\n",root1,root2);
+    }
+    else if (D==0)
+    {
+        root1=-b/(2*a);
+        printf("roots are real and equal:\n");
+        printf("root1=root2=%.2f\n",root1);
+    }
+    else{
+        realpart= -b/(2*a);
+        imgpart= sqrt(-D)/(2*a);
+        printf("roots are imaginary and complex:\n");
+        printf("root1=%.2f+%.2fi\n",realpart,imgpart);
+        printf("root2=%.2f-%.2fi\n",realpart,imgpart);
+    }
+    return 0;
+}
